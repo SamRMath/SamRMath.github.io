@@ -48,7 +48,6 @@
             display: block;
         }
     </style>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -56,7 +55,7 @@
     </header>
     <main>
         <h3>Introduction</h3>
-        <img src="/itis3135/images/Sam_Intro_pic.jpg" alt="professional picture"></a>
+        <img id="intro-img" src="" alt="professional picture">
         <h5>Personal Background:</h4>
         <p>Born in Indiana, and moved to Virginia Beach when I was 4. After graduating high school, my family moved to Mooresville, and I commute to school from there.</p>
         <h5>Professional Background:</h4>
@@ -85,8 +84,24 @@
         <p>Personal Item: I was once bitten in the butt by a dog, and had a chunk of my butt torn out. (too personal? instructions not clear)</p>
     </main>
     <footer>
-        <p><a href="/itis3135/index.html">ITIS-3135 Homepage</a>
-        ~ <a href="/itis3135/pages/contract.html">Class Contract</a></p>
+        <p>
+            <a id="link-home">ITIS-3135 Homepage</a>
+            ~ <a id="link-contract">Class Contract</a>
+        </p>
     </footer>
+
+    <script>
+        const currentSite = window.location.hostname;
+        let basePath = "/itis3135/";
+
+        if (currentSite.includes("webpages.charlotte.edu")) {
+            basePath = "/smathe17/itis3135/";
+        }
+
+        document.getElementById("intro-img").src = basePath + "images/Sam_Intro_pic.jpg";
+
+        document.getElementById("link-home").href = basePath + "index.html";
+        document.getElementById("link-contract").href = basePath + "pages/contract.html";
+    </script>
 </body>
 </html>
