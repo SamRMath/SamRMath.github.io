@@ -113,5 +113,14 @@
         document.getElementById("intro-img").src = basePath + "images/Sam_Intro_pic.jpg";
     </script>
     <script src="../scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        if (typeof setHeaderLinks === "function") {
+          setHeaderLinks();
+        }
+      }, 50);
+    });
+  </script>
 </body>
 </html>

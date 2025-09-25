@@ -89,6 +89,15 @@
     </footer>
     
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        if (typeof setHeaderLinks === "function") {
+          setHeaderLinks();
+        }
+      }, 50);
+    });
+  </script>
     
 </body>
 </html>
