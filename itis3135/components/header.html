@@ -6,7 +6,6 @@
     ~ <a id="link-contract">Contract</a>
 </p>
 <script>
-(function setupHeader() {
     const currentSite = window.location.hostname;
     let basePath = "/itis3135/";
 
@@ -14,13 +13,8 @@
         basePath = "/smathe17/itis3135/";
     }
 
-    const home = document.getElementById("link-home");
-    const intro = document.getElementById("link-intro");
-    const contract = document.getElementById("link-contract");
-
-    if (home) home.href = basePath + "index.html";
-    if (intro) intro.href = basePath + "pages/intro.html";
-    if (contract) contract.href = basePath + "pages/contract.html";
-})();
+    document.getElementById("link-home").href = basePath + "index.html"
+    document.getElementById("link-intro").href = basePath + "pages/intro.html"
+    document.getElementById("link-contract").href = basePath + "pages/contract.html"
 </script>
 
