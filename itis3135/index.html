@@ -89,5 +89,19 @@
     </footer>
     
     <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentSite = window.location.hostname;
+        let basePath = "/itis3135/";
+
+        if (currentSite.includes("webpages.charlotte.edu")) {
+        basePath = "/smathe17/itis3135/";
+        }
+
+        document.getElementById("link-home").href = basePath + "index.html";
+        document.getElementById("link-contract").href = basePath + "pages/contract.html";
+        document.getElementById("link-intro").href = basePath + "pages/intro.html";
+    });
+</script>
 </body>
 </html>
