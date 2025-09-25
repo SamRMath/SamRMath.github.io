@@ -1,4 +1,3 @@
-
 <h1>Sam Mathews' Sleepy Mammoth | ITIS-3135</h1>
 <h2>Fall 2025</h2>
 <p>
@@ -7,14 +6,16 @@
     ~ <a id="link-contract">Contract</a>
 </p>
 <script>
-    const currentSite = window.location.hostname;
-    let basePath = "/itis3135/";
+    document.addEventListener("DOMContentLoaded", function () {
+        const currentSite = window.location.hostname;
+        let basePath = "/itis3135/";
 
-    if (currentSite.includes("webpages.charlotte.edu")) {
-    basePath = "/smathe17/itis3135/";
-    }
+        if (currentSite.includes("webpages.charlotte.edu")) {
+        basePath = "/smathe17/itis3135/";
+        }
 
-    document.getElementById("link-home").href = basePath + "index.html";
-    document.getElementById("link-contract").href = basePath + "pages/contract.html";
-    document.getElementById("link-intro").href = basePath + "pages/intro.html";
+        document.getElementById("link-home").href = basePath + "index.html";
+        document.getElementById("link-contract").href = basePath + "pages/contract.html";
+        document.getElementById("link-intro").href = basePath + "pages/intro.html";
+    });
 </script>
