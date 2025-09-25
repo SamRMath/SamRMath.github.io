@@ -14,13 +14,17 @@
         basePath = "/smathe17/itis3135/";
     }
 
-    const home = document.getElementById("link-home");
-    const intro = document.getElementById("link-intro");
-    const contract = document.getElementById("link-contract");
+    const links = {
+        "link-home": "index.html",
+        "link-intro": "pages/intro.html",
+        "link-contract": "pages/contract.html"
+    };
 
-    if (home) home.href = basePath + "index.html";
-    if (intro) intro.href = basePath + "pages/intro.html";
-    if (contract) contract.href = basePath + "pages/contract.html";
+    Object.entries(links).forEach(([id, path]) => {
+        const el = document.getElementById(id);
+        if (el) el.href = basePath + path;
+    });
 }
+setTimeout(setHeaderLinks, 50);
 </script>
 
