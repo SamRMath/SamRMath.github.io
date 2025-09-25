@@ -85,11 +85,7 @@
         <p>Personal Item: I was once bitten in the butt by a dog, and had a chunk of my butt torn out. (too personal? instructions not clear)</p>
     </main>
     <footer>
-        <p>
-            <a id="link-home">ITIS-3135 Homepage</a>
-            ~ <a id="link-contract">Class Contract</a>
-        </p>
-        <p>Designed by: <a id="link-maker">Mathews Unlimited</a></p>
+        <div data-include="../components/footer.html"></div>
     </footer>
 
     <script>
@@ -101,10 +97,7 @@
         }
 
         document.getElementById("intro-img").src = basePath + "images/Sam_Intro_pic.jpg";
-
-        document.getElementById("link-home").href = basePath + "index.html";
-        document.getElementById("link-contract").href = basePath + "pages/contract.html";
-        document.getElementById("link-maker").href = basePath + "mathewsunlimited.com/index.html"
     </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>

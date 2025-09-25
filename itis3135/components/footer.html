@@ -7,5 +7,16 @@
         ~ <a href="https://www.codecademy.com/profiles/samrmath00" target="_blank">Codecademy</a>
         </p>
         <br>
-        <p>Designed by: <a href="mathewsunlimited.com/index.html" target="_blank">Mathews Unlimited</a></p>
+        <p>Designed by: <a id="link-maker" target="_blank">Mathews Unlimited</a></p>
+
+        <script>
+        const currentSite = window.location.hostname;
+        let basePath = "/itis3135/";
+
+        if (currentSite.includes("webpages.charlotte.edu")) {
+            basePath = "/smathe17/itis3135/";
+        }
+
+        document.getElementById("link-maker").href = basePath + "mathewsunlimited.com/index.html"
+    </script>
     </footer>
