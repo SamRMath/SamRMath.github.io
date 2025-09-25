@@ -17,6 +17,15 @@
             padding: 20px;
             background: rgba(28, 27, 27, 0.5);
         }
+        header a {
+            color: gold;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 15px;
+        }
+        header a:hover {
+            color: white;
+        }
         h1 {
             margin: 0;
             font-size: 2.5em;
@@ -29,8 +38,8 @@
             margin: 10px;
             padding: 10px 20px;
             font-size: 1.2em;
-            color: rgb(24, 5, 232);
-            background: #f3efef;
+            color: gold;
+            background: black;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
@@ -40,14 +49,14 @@
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 1.2em;
-            color: rgb(209, 5, 232);
+            color: rgb(51, 0, 255);
             background: #f3efef;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s;
         }
         .button:hover {
-            background: #9d00c4;
+            background: #00c490;
         }
         footer {
             background: rgba(0, 0, 0, 0.5);
@@ -55,13 +64,19 @@
             bottom: 0;
             width: 100%;
         }
+        footer a {
+            color: gold;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>ITIS-3135</h1>
-        <h2>Fall 2025</h2>
+        <div data-include="components/header.html"></div>
     </header>
     <main>
         <p>This is my webpage for my ITIS-3135 class.</p>
@@ -70,13 +85,9 @@
         <a href="pages/contract.html">Course Contract</a>
     </main>
     <footer>
-        <p><a href="https://github.com/SamRMath">GitHub</a>
-        ~ <a href="https://webpages.charlotte.edu/smathe17/">CLT Web</a>
-        ~ <a href="https://samrmath.github.io/">GitHub.io</a>
-        ~ <a href="https://www.linkedin.com/in/samrmathews/">LinkedIn</a>
-        </p>
-        <br>
-        <p>Designed by: <a href="mathewsunlimited.com/index.html">Mathews Unlimited</a></p>
+        <div data-include="components/footer.html"></div>
     </footer>
+    
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
