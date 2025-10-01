@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Evaluations</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #9409b3;
+            color: gold;
+        }
+        a {
+            color: gold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        h2, h3, h4 {
+            font-family: 'Georgia', serif;
+            color: gold;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+        }
+        body {
+            margin-bottom: 10rem;
+        }
+        p {
+            margin: 0.5rem 0;
+        }
+        header {
+            background: #4c015c;
+            color: gold;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background: #4c015c;
+            color: gold;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <main>
+        <h2>Website Evaluations</h2>
+        <section>
+            <h3>Good Example</h3>
+            <h3><a href="https://foundry.co/">Foundry</a></h3>
+            <p>
+                Foundry.co is an e-commerce site selling fine art prints,
+                 maps, blueprints, typographic art — framed or unframed. 
+                 The homepage emphasizes new inventory, categories (Cartography, 
+                 Architecture, Astronomy, etc.), and “Popular Now” items, with 
+                 imagery of large prints and a “Shop All” call to action.
+            </p>
+            <ul>
+                <li>
+                    <h4>Contrast</h4>
+                    <p>
+                        The site uses strong visual contrast: large images of 
+                        prints against white background, bold typography for 
+                        headings (“Shop All,” category names), clear call-to-action 
+                        buttons. The art images provide visual interest and help draw the eye.
+                    </p>
+                </li>
+                <li>
+                    <h4>Repetition</h4>
+                    <p>
+                        The site maintains consistency in style: repeated use of 
+                        imagery blocks, category labels, consistent heading styles, 
+                        button styling, grid layouts of art cards, etc. This gives a cohesive feel.
+                    </p>
+                </li>
+                <li>
+                    <h4>Alignment</h4>
+                    <p>
+                        Elements are well aligned in a grid arrangement: product cards, headers, 
+                        nav items have consistent alignment. Margins and paddings are fairly consistent.
+                    </p>
+                </li>
+                <li>
+                    <h4>Proximity</h4>
+                    <p>
+                        Related items are grouped: product images, their titles/prices/buttons are clustered; 
+                        navigation links are grouped; shipping info is near the relevant section. This helps users scan logically.
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Bad Example</h3>
+            <h3><a href="https://dsrny.com/">Diller Scofidio + Renfro</a></h3>
+            <p>
+                dsrny.com is the website of Diller Scofidio + Renfro (DS+R), an interdisciplinary design / architecture studio. 
+                The site functions as a portfolio and identity platform: it showcases their projects, provides access to 
+                “Studio” / “About” information, and allows filtering and exploration of work across typologies, themes, and scales.
+            </p>
+            <ul>
+                <li>
+                    <h4>Contrast</h4>
+                    <p>
+                        Because the design is experimental, some typography, especially when overlaying busy images, risks 
+                        becoming harder to read. Also, the varying light/dark tones of images can cause inconsistency in how 
+                        readable a text overlay is.
+                    </p>
+                </li>
+                <li>
+                    <h4>Repetition</h4>
+                    <p>
+                        Some pages or project layouts might deviate from this home page's layout weakening the uniform rhythm. 
+                        If someone jumps between project pages and the home page, sometimes the variation is large, and that 
+                        can feel less anchored.
+                    </p>
+                </li>
+                <li>
+                    <h4>Alignment</h4>
+                    <p>
+                        Because some images or overlays may “escape” strict grid boundaries, in responsive or narrow-viewport 
+                        modes some alignment may shift or feel less rigid. Also, dynamic transitions might momentarily shift 
+                        alignment in ways that feel disjointed.
+                    </p>
+                </li>
+                <li>
+                    <h4>Proximity</h4>
+                    <p>
+                        The images and text are all crammed together and it creates a very cramped looking page. 
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        if (typeof setHeaderLinks === "function") {
+          setHeaderLinks();
+        }
+      }, 50);
+    });
+    </script>
+</body>
+</html>
