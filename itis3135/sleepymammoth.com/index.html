@@ -18,13 +18,29 @@
             padding: 20px 0;
             text-align: center;
         }
-        header h1 {
+        header h2 {
             margin: 0;
             font-size: 2.5em;
         }
         header p {
             margin: 5px 0 0;
             font-size: 1.2em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #e0f7fa;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #b3e5fc;
+            text-decoration: none;
         }
         .description {
             text-align: center;
@@ -34,21 +50,6 @@
         .description h2 {
             font-size: 2em;
             margin-bottom: 20px;
-        }
-        .description p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .description a {
-            text-decoration: none;
-            background-color: #e94560;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .description a:hover {
-            background-color: #ff6f91;
         }
         footer {
             text-align: center;
@@ -60,8 +61,14 @@
 </head>
 <body>
     <header>
-        <h1>Sleepy Mammoth</h1>
+        <h2>Sleepy Mammoth</h2>
         <p>&quot;Experience the Comfort of the Ice Age&quot;</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us!</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section class="description">
@@ -85,7 +92,6 @@
                 warmth—but also to spark wonder for our planet’s deep past, marrying craftsmanship, comfort, 
                 and conservation in every stitch.
             </p>
-            <a href="#shop">Shop Now</a>
         </section>
     </main>
     <footer>
