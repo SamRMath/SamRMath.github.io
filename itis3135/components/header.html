@@ -1,12 +1,16 @@
 <h1>Sam Mathews' Sleepy Mammoth | ITIS-3135</h1>
 <h2>Fall 2025</h2>
-<p>
+<nav>
     <a id="link-home">ITIS-3135 Home</a>
     ~ <a id="link-intro">Introduction</a>
     ~ <a id="link-contract">Contract</a>
     ~ <a id="link-evaluations">Website Evaluations</a>
     ~ <a id="link-company" target="_blank">Sleepy Mammoth</a>
-</p>
+</nav>
+<br>
+<nav>
+    <a id="link-crappy" target="_blank">Crappy Webpage</a>
+</nav>
 <script>
   function setHeaderLinks() {
     const currentSite = window.location.hostname;
@@ -21,7 +25,8 @@
         "link-intro": "pages/intro.html",
         "link-contract": "pages/contract.html",
         "link-evaluations": "pages/website_evaluations.html",
-        "link-company": "sleepymammoth.com/index.html"
+        "link-company": "sleepymammoth.com/index.html",
+        "link-crappy": "stuff/Cr& ppy.htm"
     };
 
     Object.entries(links).forEach(([id, path]) => {
