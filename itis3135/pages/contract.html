@@ -36,11 +36,19 @@
             margin: 0 auto;
             max-width: 1200px;
             width: 90%;
+            text-align: left;
+        }
+        h4 {
             text-align: center;
+            margin-top: 20px;
         }
         main p {
             font-size: 1.2em;
             line-height: 1.6;
+        }
+        .centered-text {
+            display: block;
+            text-align: center;
         }
         footer {
             background-color: #333;
@@ -58,6 +66,31 @@
             font-size: 0.9em;
             color: #e6e5e8;
         }
+
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -67,7 +100,19 @@
     </header>
     <main>
         <h4>Course Contract</h4>
-        <p>I, Sam R. Mathews, agree to abide by the terms of the course contract in my Fall 2025, ITIS-3135, Front-End Development class with my instructor, Professor D.I. von Briesen. I understand that all work that I do on publicly available online tools will be available to the world, and will not put information there that is inappropriate for schoolwork, or that I wish to keep private. I also understand that it is my work that counts for attendance, not logins or showing up for class. As such, failure to turn in assignments may show as absences. I also understand that given the structure and content of this class it’s possible to find many examples online or even view my classmates’ code directly. I swear that I will only use these resources to learn, and will not cut and paste code except where I have properly given credit (i.e. external libraries) and never from my classmates. <br>Signed: Sam R. Mathews , 31/08/2025</p>
+        <p>
+            I, Sam R. Mathews, agree to abide by the terms of the course contract in my Fall 2025, 
+            ITIS-3135, Front-End Development class with my instructor, Professor D.I. von Briesen. 
+            I understand that all work that I do on publicly available online tools will be available 
+            to the world, and will not put information there that is inappropriate for schoolwork, or 
+            that I wish to keep private. I also understand that it is my work that counts for attendance, 
+            not logins or showing up for class. As such, failure to turn in assignments may show as absences. 
+            I also understand that given the structure and content of this class it’s possible to find many 
+            examples online or even view my classmates’ code directly. I swear that I will only use these 
+            resources to learn, and will not cut and paste code except where I have properly given credit 
+            (i.e. external libraries) and never from my classmates. 
+            <br><span class="centered-text">Signed: Sam R. Mathews , 31/08/2025</span>
+        </p>
     </main>
     <footer>
         <div data-include="../components/footer.html"></div>
