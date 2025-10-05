@@ -61,6 +61,31 @@
             margin: auto auto;
             display: block;
         }
+
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -71,7 +96,7 @@
     <main>
         <h2>Sam R. Mathews</h2>
         <h3>Introduction</h3>
-        <img id="intro-img" alt="professional picture">
+        <img id="intro-img"  src="../images/Sam_Intro_pic.jpg" alt="professional picture">
         <h4>Personal Background:</h4>
         <p>Born in Indiana, and moved to Virginia Beach when I was 4. After graduating high school, my family moved to Mooresville, and I commute to school from there.</p>
         <h4>Professional Background:</h4>
