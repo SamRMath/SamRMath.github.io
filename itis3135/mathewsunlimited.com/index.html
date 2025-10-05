@@ -37,11 +37,17 @@
             text-decoration: underline;
         }
 
+        h2 {
+            text-align: center;
+        }
         main {
             margin: 0 auto;
             max-width: 1200px;
             width: 90%;
-            text-align: center;
+            text-align: left;
+        }
+        main p {
+            text-align: left;
         }
 
         img {
@@ -58,9 +64,14 @@
             bottom: 0;
             width: 100%;
         }
-        .about-us, .our-services {
+        .about-us {
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
+        }
+        .our-services {
+            max-width: 600px;
+            text-align: left;
         }
         ul {
             list-style-type: square;
@@ -72,6 +83,30 @@
             color: #d7263d;
         }
 
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
