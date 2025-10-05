@@ -37,19 +37,15 @@
             text-decoration: underline;
         }
 
-        h2 {
+        h2, h3, h4 {
             text-align: center;
         }
         main {
             margin: 0 auto;
             max-width: 1200px;
             width: 90%;
-            text-align: left;
         }
-        main p {
-            text-align: left;
-        }
-
+        
         img {
             vertical-align: middle; 
             width: 50px; 
@@ -71,13 +67,28 @@
         }
         .our-services {
             max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-spacer {
+            text-align: center;
+        }
+        .contact-spacer {
+            text-align: center;
+        }
+        .text1 {
+            display: inline-block;
+            text-align: left;
+        }
+        .text2 {
+            display: inline-block;
             text-align: left;
         }
         ul {
             list-style-type: square;
             padding-left: 20px;
-            text-align: left;
             display: inline-block;
+            text-align: left;
         }
         a {
             color: #d7263d;
@@ -124,34 +135,40 @@
     </nav>
     <main>
         <h2>Mathews Unlimited Services</h2>
-        <p class="about-us">Mathews Unlimited has been faithfully serving our community for 500 years! Having started out as a humble
+        <p class="about-us">
+            <span class="text1">Mathews Unlimited has been faithfully serving our community for 500 years! Having started out as a humble
             sloth sanctuary, we have expanded our services to meet the diverse needs of our clients. Our team is now doing 
-            everything from sloth grooming to website design. No matter what you need, Mathews Unlimited is here to help!
+            everything from sloth grooming to website design. No matter what you need, Mathews Unlimited is here to help!</span>
         </p>
-        <section id="about">
-            <h3>About Us</h3>
-            <ul>
-                <li>Founded in 1524 as a sloth sanctuary</li>
-                <li>Saved over a million sloths completely by accident</li>
-                <li>Created the internet</li>
-                <li>Once found a sloth the size and shape of a giraffe (And it acted like one too!)</li>
-                <li>Had a minor hand in a World War when we fired someone who did NOT take it well</li>
-            </ul>
-        </section>
+        <div class="about-spacer">
+            <section id="about">
+                <h3>About Us</h3>
+                <ul>
+                    <li>Founded in 1524 as a sloth sanctuary</li>
+                    <li>Saved over a million sloths completely by accident</li>
+                    <li>Created the internet</li>
+                    <li>Once found a sloth the size and shape of a giraffe (And it acted like one too!)</li>
+                    <li>Had a minor hand in a World War when we fired someone who did NOT take it well</li>
+                </ul>
+            </section>
+        </div>
         <section id="services">
             <h3>Our Services</h3>
-            <p class="our-services">Our company is here for all your sloth and web design needs! We will work with you from the very beginning of your
+            <p class="our-services">
+                <span class="text2">Our company is here for all your sloth and web design needs! We will work with you from the very beginning of your
                 journey to the very end. Our services include: Designing and hosting websites, sloth grooming, sloth training, sloth
                 therapy, and much more! If you have a need, we can probably meet it. We have been known to do some pretty crazy things
-                over the years, so don't hesitate to ask! Just don't ask us what we were doing in 1944...
+                over the years, so don't hesitate to ask! Just don't ask us what we were doing in 1944....</span>
             </p>
         </section>
-        <section id="contact">
-            <h4>Contact Us</h4>
-            <p>Get in touch with us by email at <a href="mailto:info@mathewsunlimited.com">info@mathewsunlimited.com</a>.</p>
-            <p>Phone: <a href="tel:+11234567890">1-123-456-7890</a></p>
-            <p>Address: 123 Fake Street</p>
-        </section>
+        <div class="contact-spacer">
+            <section id="contact">
+                <h4>Contact Us</h4>
+                <p>Get in touch with us by email at <a href="mailto:info@mathewsunlimited.com">info@mathewsunlimited.com</a>.</p>
+                <p>Phone: <a href="tel:+11234567890">1-123-456-7890</a></p>
+                <p>Address: 123 Fake Street</p>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Mathews Unlimited. All rights reserved</p>
