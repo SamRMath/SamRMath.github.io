@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Full Stack JavaScript Outline</title>
+    <style>
+
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <main>
+        <h2>Course Outline</h2>
+        <table>
+            <caption>FCC Full Stack JavaScript Curriculum</caption>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Number of Steps</th>
+                    <th>Estimated Time of Completion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Code Editor</td>
+                    <td>5 Steps</td>
+                    <td>10/17/25(1st Week Saturday)</td>
+                </tr>
+                <tr>
+                    <td>Variables and Strings</td>
+                    <td>62 Steps</td>
+                    <td>10/17/25</td>
+                </tr>
+                <tr>
+                    <td>Booleans and Numbers</td>
+                    <td>37 Steps</td>
+                    <td>10/17/25</td>
+                </tr>
+                <tr>
+                    <td>Functions</td>
+                    <td>38 Steps</td>
+                    <td>10/17/25</td>
+                </tr>
+                <tr>
+                    <td>Arrays</td>
+                    <td>35 Steps</td>
+                    <td>10/24/25</td>
+                </tr>
+                <tr>
+                    <td>Ojects</td>
+                    <td>28 Steps</td>
+                    <td>10/24/25</td>
+                </tr>
+                <tr>
+                    <td>Loops</td>
+                    <td>22 Steps</td>
+                    <td>10/24/25</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Fundamentals Review</td>
+                    <td>30 Steps</td>
+                    <td>10/24/25</td>
+                </tr>
+                <tr>
+                    <td>Higher Order Functions and Callbacks</td>
+                    <td>37 Steps</td>
+                    <td>10/24/25</td>
+                </tr>
+                <tr>
+                    <td>DOM Manipulation and Events</td>
+                    <td>87 Steps</td>
+                    <td>10/31/25</td>
+                </tr>
+                <tr>
+                    <td>JavaScript and Accessibility</td>
+                    <td>42 Steps</td>
+                    <td>10/31/25</td>
+                </tr>
+                <tr>
+                    <td>Debugging</td>
+                    <td>8 Steps</td>
+                    <td>10/31/25</td>
+                </tr>
+                <tr>
+                    <td>Basic Regex</td>
+                    <td>47 Steps</td>
+                    <td>10/31/25</td>
+                </tr>
+                <tr>
+                    <td>Form Validation</td>
+                    <td>103 Steps</td>
+                    <td>11/7/25</td>
+                </tr>
+                <tr>
+                    <td>Dates</td>
+                    <td>5 Steps</td>
+                    <td>11/7/25</td>
+                </tr>
+                <tr>
+                    <td>Audio and Video Events</td>
+                    <td>55 Steps</td>
+                    <td>11/7/25</td>
+                </tr>
+                <tr>
+                    <td>Maps and Sets</td>
+                    <td>37 Steps</td>
+                    <td>11/7/25</td>
+                </tr>
+                <tr>
+                    <td>localStorage and CRUD Operations</td>
+                    <td>78 Steps</td>
+                    <td>11/14/25</td>
+                </tr>
+                <tr>
+                    <td>Classes</td>
+                    <td>68 Steps</td>
+                    <td>11/14/25</td>
+                </tr>
+                <tr>
+                    <td>Recursion</td>
+                    <td>112 Steps</td>
+                    <td>11/21/25</td>
+                </tr>
+                <tr>
+                    <td>Functional Programming</td>
+                    <td>23 Steps</td>
+                    <td>11/28/25</td>
+                </tr>
+                <tr>
+                    <td>Asynchronous JavaScript</td>
+                    <td>36 Steps</td>
+                    <td>11/28/25</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Review</td>
+                    <td>1 Step</td>
+                    <td>11/28/25</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Estimated Time</td>
+                    <td>6 Weeks</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        if (typeof setHeaderLinks === "function") {
+          setHeaderLinks();
+        }
+      }, 50);
+    });
+    </script>
+</body>
+</html>
