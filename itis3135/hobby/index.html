@@ -18,7 +18,7 @@
             text-align: center;
             padding: 1em 0;
         }
-        header h1 {
+        h1 {
             margin: 0;
         }
         nav {
@@ -38,7 +38,7 @@
         section {
             display: none;
         }
-        section.active {
+        .active {
             display: block;
         }
         figure {
@@ -66,24 +66,25 @@
     <script>
         function showSection(id) {
             const sections = document.querySelectorAll('section');
-            sections.forEach(section => section.classList.remove('active'));
+            sections.forEach((section) => section.classList.remove('active'));
             document.getElementById(id).classList.add('active');
         }
         document.addEventListener('DOMContentLoaded', () => {
             showSection('what');
         });
     </script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Video Games</h1>
         <nav>
-            <a href="#" onclick="showSection('who')">Who</a> | 
-            <a href="#" onclick="showSection('what')">What</a> | 
-            <a href="#" onclick="showSection('when')">When</a> | 
-            <a href="#" onclick="showSection('where')">Where</a> | 
-            <a href="#" onclick="showSection('how')">How</a> | 
-            <a href="#" onclick="showSection('why')">Why</a> | 
+            <a href="#" onclick="showSection('who')">Who</a> 🌐 
+            <a href="#" onclick="showSection('what')">What</a> 🌐 
+            <a href="#" onclick="showSection('when')">When</a> 🌐 
+            <a href="#" onclick="showSection('where')">Where</a> 🌐 
+            <a href="#" onclick="showSection('how')">How</a> 🌐 
+            <a href="#" onclick="showSection('why')">Why</a>
         </nav>
     </header>
     <main>
@@ -235,11 +236,6 @@
         </section>
     </main>
     <footer>
-        <p>
-            <a href="https://validator.w3.org/" target="_blank">HTML Validation</a> | 
-            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a> | 
-            <a href="https://wave.webaim.org/" target="_blank">Accessibility Validation</a>
-        </p>
         <p>&copy; 2025 <a href="../mathewsunlimited.com/index.html" target="_blank">Mathews Unlimited</a></p>
     </footer>
 </body>
