@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Hobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e69;
+            color: #b1adad;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #000000;
+            color: rgb(142, 24, 24);
+            text-align: center;
+            padding: 1em 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin: 1em 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2em;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        figure {
+            text-align: center;
+            margin: 1em 0;
+        }
+        figure img {
+            max-width: 50%;
+            height: auto;
+        }
+        figure figcaption {
+            font-style: italic;
+        }
+        footer {
+            margin-top: 2em;
+        }
+        footer a {
+            color: rgb(142, 24, 24);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('what');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Video Games</h1>
+        <nav>
+            <a href="#" onclick="showSection('who')">Who</a> | 
+            <a href="#" onclick="showSection('what')">What</a> | 
+            <a href="#" onclick="showSection('when')">When</a> | 
+            <a href="#" onclick="showSection('where')">Where</a> | 
+            <a href="#" onclick="showSection('how')">How</a> | 
+            <a href="#" onclick="showSection('why')">Why</a> | 
+        </nav>
+    </header>
+    <main>
+        <section id="who">
+            <h2>About Me</h2>
+            <p>
+                I have been playing video games since I was a child.
+                It became a hobby for my when I first played Sly Cooper on the PlayStation 2 and
+                some Harry Potter game on PC that I can't remember the name of.
+                Since then, I have enjoyed a variety of games across different genres 
+                and platforms. Gaming has provided me with countless hours of entertainment,
+                social interaction, and even opportunities to learn new skills.
+            </p>
+            <figure>
+                <img src="hob_images/GamingWHOimage.png" alt="A young boy playing computer games">
+                <figcaption>This image was generated using AI to represent part of my introduction to gaming.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt described a cheerful young boy with brown hair and brown 
+                eyes playing video games on a laptop. It emphasized a warm, cartoon-style 
+                illustration showing him wearing headphones, holding a controller, and 
+                focusing on the screen to capture the fun and immersive feeling of gaming.</em>
+            </p>
+        </section>
+        <section id="what">
+            <h2>What is gaming as a hobby?</h2>
+            <p>
+                Playing video games as a hobby offer an engaging and interactive form 
+                of entertainment that combines creativity, problem-solving, and 
+                social connection. Players can explore immersive worlds, develop 
+                strategic thinking, and improve coordination while enjoying diverse 
+                genres—from action and adventure to puzzles and simulations.Beyond 
+                recreation, gaming often fosters community through multiplayer 
+                experiences and online collaboration, making it a popular pastime 
+                that balances relaxation, challenge, and personal expression.
+            </p>
+            <figure>
+                <img src="hob_images/GamingWHATimage.png" alt="A representation of gaming as a hobby">
+                <figcaption>This image was generated using AI to showcase a person playing video games as a hobby.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt described a digital illustration of a young man deeply 
+                engaged in gaming. It mentioned key visual details like him sitting 
+                in a gaming chair, wearing headphones, holding a controller, and 
+                playing an action game on screen where a knight fights a 
+                monster — all to represent gaming as a fun and immersive hobby.</em>
+            </p>
+        </section>
+        <section id="when">
+            <h2>When is a good time to play video games?</h2>
+            <p>
+                The best time to play video games is when it fits naturally 
+                into your daily routine without interfering with important 
+                responsibilities like work, school, or sleep. Many people 
+                find that playing in the evening after completing tasks or 
+                on weekends during free time provides a relaxing way to unwind 
+                and have fun. Ultimately, the ideal gaming time depends on personal 
+                schedules and balance—ensuring it remains an enjoyable and healthy 
+                hobby rather than a distraction.
+            </p>
+            <figure>
+                <img src="hob_images/GamingWHENimage.png" alt="Gaming to relax">
+                <figcaption>This image was generated using AI to depict a man playing video games to relax.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt described a digital illustration of a man unwinding 
+                after a long day by playing video games. It emphasized a cozy, 
+                relaxed atmosphere — showing him lounging comfortably on a couch 
+                with a controller in hand, warm lighting from a lamp, and a calm 
+                room setting to convey leisure and comfort.</em>
+            </p>
+        </section>
+        <section id="where">
+            <h2>Where is the best place to game?</h2>
+            <p>
+                The best place to play video games is a comfortable, quiet 
+                environment where you can focus and relax without distractions. 
+                This could be a dedicated gaming setup at home with a good chair, 
+                proper lighting, and reliable internet, or a cozy spot like a 
+                living room or bedroom.
+            </p>
+            <figure>
+                <img src="hob_images/GamingWHEREimage.png" alt="A gaming setup">
+                <figcaption>This image was generated using AI to represent a nice gaming setup.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt described a cozy and well-lit PC gaming setup with a 
+                large monitor showing an action game scene. It included details 
+                like a gaming chair, tower PC with glowing fans, illuminated 
+                keyboard, headset, and warm ambient lighting to create a comfortable, 
+                immersive atmosphere.</em>
+            </p>
+        </section>
+        <section id="how">
+            <h2>How do I enjoy games?</h2>
+            <p>
+                There are many ways to enjoy video games: playing games on 
+                PC, Console, or Mobile devices; single-player or multiplayer modes;
+                casual or competitive gaming; and exploring various genres like Fantasy
+                or Action.
+            </p>
+            <p>
+                I personally like to play on my PC using a controller for certain games.
+                I like playing casual, story-driven games that immerse me in their worlds.
+                I also enjoy co-op games where I can team up with friends sometimes too,
+                when I'm in that kinda mood.
+            </p>
+            <figure>
+                <img src="hob_images/GamingHOWimage.png" alt="Various Gaming Methods">
+                <figcaption>This image was generated using AI to illustrate some of the ways people play video games.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt described a digital illustration of a gaming setup 
+                on a table, featuring three devices: a gaming PC with glowing fans, 
+                a white game console with a controller, and a smartphone displaying 
+                a game. It emphasized a warm color palette and cozy lighting to create 
+                a modern yet inviting atmosphere.</em>
+            </p>
+        </section>
+        <section id="why">
+            <h2>Why do people play video games?</h2>
+            <p>People play video games for a variety of reasons, including 
+                entertainment, challenge, and social connection. Games offer 
+                an engaging way to escape daily stress, explore new worlds, 
+                and test problem-solving or strategic skills. Many players 
+                enjoy the sense of achievement from completing objectives or 
+                improving their abilities, while others value the opportunity 
+                to connect with friends and communities through multiplayer 
+                experiences. Overall, gaming satisfies curiosity, creativity, and 
+                the desire for fun in a dynamic and interactive way.
+            </p>
+            <p>
+                I like to play video games because they allow me to unwind after a long 
+                day of work or school. They provide an immersive escape into different 
+                worlds and stories that I find enjoyable and relaxing.
+            </p>
+            <figure>
+                <img src="hob_images/GamingWHYimage.png" alt="Why people play games">
+                <figcaption>This image was generated using AI to show a few reasons people play video gaems.</figcaption>
+            </figure>
+            <p>
+                <em>The prompt was designed to visually capture the diverse 
+                motivations behind why people play video games. It called for 
+                a vibrant collage featuring scenes of: Excitement, Challenge, 
+                Creativity, Immersion, Social Connection, and Relaxation. The 
+                goal was to use expressive characters and dynamic lighting to 
+                convey emotion and engagement across these scenarios.</em>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <a href="https://validator.w3.org/" target="_blank">HTML Validation</a> | 
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a> | 
+            <a href="https://wave.webaim.org/" target="_blank">Accessibility Validation</a>
+        </p>
+        <p>&copy; 2025 <a href="../mathewsunlimited.com/index.html" target="_blank">Mathews Unlimited</a></p>
+    </footer>
+</body>
+</html>
