@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A basic website boilerplate">
+    <title>Introduction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        input[type="file"] {
+            padding: 0;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction Form</h1>
+    </header>
+    <main>
+        <h3>Please submit the form below.</h3>
+<form id="introForm">
+  <!-- Name Fields -->
+  <label for="firstName">First Name*</label>
+  <input type="text" id="firstName" name="firstName" value="YourFirstName" placeholder="Enter your first name" required>
+
+  <label for="middleName">Middle Name/Initial</label>
+  <input type="text" id="middleName" name="middleName" value="M" placeholder="Enter your middle name">
+
+  <label for="nickname">Nickname/Preferred Name</label>
+  <input type="text" id="nickname" name="nickname" value="Nick" placeholder="Enter nickname">
+
+  <label for="lastName">Last Name*</label>
+  <input type="text" id="lastName" name="lastName" value="YourLastName" placeholder="Enter last name" required>
+  
+  <!-- Acknowledgment -->
+  <label for="ackStatement">Acknowledgment Statement*</label>
+  <input type="text" id="ackStatement" name="ackStatement" value="I agree..." required>
+
+  <label for="ackDate">Acknowledgment Date*</label>
+  <input type="date" id="ackDate" name="ackDate" value="2025-01-01" required>
+
+  <!-- Mascot & Divider -->
+  <label for="mascotAdj">Mascot Adjective*</label>
+  <input type="text" id="mascotAdj" name="mascotAdj" value="Fierce" required>
+
+  <label for="mascotAnimal">Mascot Animal*</label>
+  <input type="text" id="mascotAnimal" name="mascotAnimal" value="Tiger" required>
+
+  <label for="divider">Divider*</label>
+  <input type="text" id="divider" name="divider" value="~" required>
+
+  <!-- Picture -->
+  <label for="picture">Picture*</label>
+  <input type="file" id="picture" name="picture">
+  <label for="picCaption">Picture Caption*</label>
+  <input type="text" id="picCaption" name="picCaption" value="This is me!" required>
+
+  <!-- Personal Statement -->
+  <label for="personalStatement">Personal Statement*</label>
+  <textarea id="personalStatement" name="personalStatement" required>Your statement here...</textarea>
+
+  <!-- Main Bullets -->
+  <label>Main Bullets*</label>
+  <input type="text" name="bullet1" value="Background info" required>
+  <input type="text" name="bullet2" value="Hobbies" required>
+  <input type="text" name="bullet3" value="Skills" required>
+  <input type="text" name="bullet4" value="Goals" required>
+  <input type="text" name="bullet5" value="Favorite subjects" required>
+  <input type="text" name="bullet6" value="Experience" required>
+  <input type="text" name="bullet7" value="Fun fact" required>
+
+  <!-- Courses -->
+  <div id="courses">
+    <div class="course">
+      <input type="text" name="dept" placeholder="Department" required>
+      <input type="text" name="courseNum" placeholder="Number" required>
+      <input type="text" name="courseName" placeholder="Name" required>
+      <input type="text" name="reason" placeholder="Reason" required>
+      <button type="button" class="deleteCourse">Delete</button>
+    </div>
+  </div>
+  <button type="button" id="addCourse">Add Course</button>
+
+  <!-- Quote -->
+  <label for="quote">Quote*</label>
+  <input type="text" id="quote" name="quote" value="Life is good" required>
+  <label for="quoteAuthor">Quote Author*</label>
+  <input type="text" id="quoteAuthor" name="quoteAuthor" value="Author Name" required>
+
+  <!-- Optional Fields -->
+  <label for="funny">Funny Thing</label>
+  <input type="text" id="funny" name="funny">
+  
+  <label for="share">Something I would like to share</label>
+  <input type="text" id="share" name="share">
+
+  <!-- Links -->
+  <label>Links</label>
+  <input type="url" name="link1" placeholder="LinkedIn">
+  <input type="url" name="link2" value="https://github.com" placeholder="GitHub">
+  <input type="url" name="link3" value="https://twitter.com" placeholder="Twitter">
+  <input type="url" name="link4" value="https://facebook.com" placeholder="Facebook">
+  <input type="url" name="link5" value="https://instagram.com" placeholder="Instagram">
+
+
+  <!-- Buttons -->
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+  <button type="button" id="clear">Clear</button>
+</form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/Introduction.js"></script>
+</body>
+</html>
