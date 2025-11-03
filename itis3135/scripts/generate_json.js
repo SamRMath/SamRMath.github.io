@@ -60,16 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>Introduction JSON</h2>
             <section>
                 <pre><code class="json">${jsonText}</code></pre>
-                <button id="reset-form">Reset Form</button>
             </section>
         `;
         hljs.highlightAll();
 
-        document.getElementById('reset-form').addEventListener('click', () => {
-            mainContent.innerHTML = '';
-            mainContent.appendChild(originalForm);
-            attachFormBehaviors(originalForm);
+        const resetButton = document.createElement('button');
+        resetButton.textContent = 'Reset Form';
+        resetButton.style.marginTop = '1rem';
+        resetButton.addEventListener('click', () => {
+            location.reload(); // simplest: reload page to restore form
         });
+        mainContent.appendChild(resetButton);
     }
 
     function attachDeleteCourseHandlers(coursesDiv) {
