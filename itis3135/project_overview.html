@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Project Overview</title>
+    <style>
+        header {
+            background-color: #2c3e50; /* deep blue-gray */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color:  #f39c12; /* light text */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ecf0f1; /* accent color on hover */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 {
+            align-self: center;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #34495e;
+        }
+        main {
+            background: var(--lightgrey);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        figure {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+        figure img {
+            max-width: 600px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h4 {
+            margin-bottom: 10px;
+            text-decoration: underline;
+            color: #34495e;
+        }
+        div[data-include] {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #34495e; /* slightly lighter than header */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9em;
+            margin-top: 40px;
+            border-top: 3px solid #f39c12; /* subtle accent line */
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div data-include="components/header.html"></div>
+</header>
+
+<main>
+    <h2>Client Project Overview</h2>
+    <h3>Project Overview</h3>
+    <ol>
+        <li>Purpose: To teach the DOM aspects of Javascript.</li>
+        <li>Intended Users: Client and those who wish to better understand DOM javascript.</li>
+        <li>Overview of content:  Providing information about how to program DOM concepts in javascript.</li>
+    </ol>
+    <h3>Client Information</h3>
+    <ol>
+        <li>Name: Evan Barber</li>
+        <li>Associated with: University of North Carolina at Charlotte (STUDENT)</li>
+        <li>Email: ebarber8@charlotte.edu</li>
+        <li>Phone: [PRIVATE]</li>
+    </ol>
+    <h3>Site Map</h3>
+    <figure>
+        <img src="images/sitemap.png" alt="Sitemap for project overview.">
+        <figcaption>Sitemap for project overview.</figcaption>
+    </figure>
+    <h3>Wire Frame</h3>
+    <figure>
+        <img src="images/wireFrame.png" alt="Wireframe for project.">
+        <figcaption>Wireframe for project.</figcaption>
+    </figure>
+    <section>
+        <h4>Homepage</h4>
+        <ol>
+            <li>Name of Page: Homepage</li>
+            <li>Purpose: its the home page</li>
+            <li>Content: Basic information about DOM javascript.</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: No.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Homepage → About-us</h4>
+        <ol>
+            <li>Name of Page: About-us</li>
+            <li>Purpose: explain who we are</li>
+            <li>Content: description of who I am as the client</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): Yes (just link to twitter and linkedin).</li>
+            <li>Actions?: No</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Homepage → Support</h4>
+        <ol>
+            <li>Name of Page: Support</li>
+            <li>Purpose: To help users if they need help</li>
+            <li>Content: manual on how to use the website</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: None.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Support → FAQ</h4>
+        <ol>
+            <li>Name of Page: FAQ</li>
+            <li>Purpose: To answer frequently asked questions.</li>
+            <li>Content:  list of frequently asked questions, with their response underneath.</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: None.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Homepage → Contact</h4>
+        <ol>
+            <li>Name of Page: Contact</li>
+            <li>Purpose: Provide a way for users to contact.</li>
+            <li>Content:  form for users to leave contact information and questions.</li>
+            <li>Enter Data? (Y/N): Yes.</li>
+            <li>Data validation? (Y/N): Yes (email or other valid contact point).</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: Submit a question.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Homepage → Login</h4>
+        <ol>
+            <li>Name of Page: Login</li>
+            <li>Purpose: Provide the user with access to their account</li>
+            <li>Content: username and password fields.</li>
+            <li>Enter Data? (Y/N): Yes.</li>
+            <li>Data validation? (Y/N): Yes (login info).</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: submission.</li>
+            <li>Special Notes: There should be a new account button that will just change the name of login to sign up filling out with the same information above.</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Homepage → Dom tutorials</h4>
+        <ol>
+            <li>Name of Page:  DOM tutorials</li>
+            <li>Purpose: Main menu for the tutorials</li>
+            <li>Content:  list all the tutorial articles</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: No.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Dom tutorials → jQuerying</h4>
+        <ol>
+            <li>Name of Page: JQuerying</li>
+            <li>Purpose: For people to learn about JQuery.</li>
+            <li>Content: Article with code image examples (like FCC).</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?:  If you click the images they should enlarge over the article.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Dom tutorials → Event listeners</h4>
+        <ol>
+            <li>Name of Page: Event listeners</li>
+            <li>Purpose: For people to learn about Event listeners.</li>
+            <li>Content: Article with code image examples (like FCC)</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: If you click the images they should enlarge over the article.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+    <section>
+        <h4>Dom tutorials → Implementation strategies</h4>
+        <ol>
+            <li>Name of Page: Implementation strategies.</li>
+            <li>Purpose: To provide common ways to implement DOM functions.</li>
+            <li>Content: Article with code image examples (like FCC)</li>
+            <li>Enter Data? (Y/N): No.</li>
+            <li>Data validation? (Y/N): No.</li>
+            <li>Contain links? (Y/N): No.</li>
+            <li>Actions?: If you click the images they should enlarge over the article.</li>
+            <li>Special Notes: N/A</li>
+        </ol>
+    </section>
+</main>
+
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
