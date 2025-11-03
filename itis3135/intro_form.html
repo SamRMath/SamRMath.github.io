@@ -119,12 +119,6 @@
         <label for="lastName">Last Name*</label>
         <input type="text" id="lastName" name="lastName" value="YourLastName" placeholder="Enter last name" required>
 
-        <!-- Acknowledgment -->
-        <label for="ackStatement">Acknowledgment Statement*</label>
-        <input type="text" id="ackStatement" name="ackStatement" value="I agree..." required>
-
-        <label for="ackDate">Acknowledgment Date*</label>
-        <input type="text" id="ackDate" name="ackDate" value="2025-11-02" placeholder="YYYY-MM-DD" required pattern="\d{4}-\d{2}-\d{2}">
 
         <!-- Mascot & Divider -->
         <label for="mascotAdj">Mascot Adjective*</label>
@@ -196,18 +190,36 @@
         I agree to the following statement:
         </label>
         <p id="ackText">I acknowledge that the information provided is accurate and complete.</p>
+        
+        <label for="ackDate">Acknowledgment Date*</label>
+        <input type="text" id="ackDate" name="ackDate" value="2025-11-02" placeholder="YYYY-MM-DD" required pattern="\d{4}-\d{2}-\d{2}">
 
         <!-- Buttons -->
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" id="clear">Clear</button>
+        <button type="button" id="generate-json">Generate JSON</button>
     </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="scripts/Introduction.js"></script>
+
+    <!-- Container for the JSON output -->
+    <div id="json-output"></div>
+
+
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+    <!-- Highlight.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="scripts/generate_json.js"></script>
+
+
     </main>
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="scripts/Introduction.js"></script>
 </body>
 </html>
