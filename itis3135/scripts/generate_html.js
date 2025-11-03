@@ -145,16 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Acknowledgment
         htmlString += `<p>Acknowledged on: ${ackDate}</p>\n`;
 
-        // --- Display rendered HTML ---
-        mainContent.innerHTML = htmlString;
+        // --- Display ONLY the highlighted HTML code ---
+        const escapedHTML = htmlString
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
 
-        // --- Display HTML code for copy/paste ---
-        const codeBlock = document.createElement('pre');
-        const code = document.createElement('code');
-        code.className = 'html'; // Highlight.js will detect as HTML
-        code.textContent = htmlString; // Preserve the HTML as text
-        codeBlock.appendChild(code);
-        mainContent.appendChild(codeBlock);
+        mainContent.innerHTML = `
+            <pre><code class="language-html">${escapedHTML}</code></pre>
+        `;
 
         // Highlight.js syntax highlighting
         if (window.hljs) {
