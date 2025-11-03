@@ -63,109 +63,151 @@
             color: #fff;
             margin-top: 1rem;
         }
+        img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
     </style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Introduction Form</h1>
+        <div data-include="components/header.html"></div>
+        <h2>Introduction Form</h2>
     </header>
-    <main>
-        <h3>Please submit the form below.</h3>
-<form id="introForm">
-  <!-- Name Fields -->
-  <label for="firstName">First Name*</label>
-  <input type="text" id="firstName" name="firstName" value="YourFirstName" placeholder="Enter your first name" required>
+    <main id="mainContent">
+    <h3>Please submit the form below.</h3>
 
-  <label for="middleName">Middle Name/Initial</label>
-  <input type="text" id="middleName" name="middleName" value="M" placeholder="Enter your middle name">
+    <form id="introForm">
+        <!-- Name Fields -->
+        <label for="firstName">First Name*</label>
+        <input type="text" id="firstName" name="firstName" value="YourFirstName" placeholder="Enter your first name" required>
 
-  <label for="nickname">Nickname/Preferred Name</label>
-  <input type="text" id="nickname" name="nickname" value="Nick" placeholder="Enter nickname">
+        <label for="middleName">Middle Name/Initial</label>
+        <input type="text" id="middleName" name="middleName" value="M" placeholder="Enter your middle name">
 
-  <label for="lastName">Last Name*</label>
-  <input type="text" id="lastName" name="lastName" value="YourLastName" placeholder="Enter last name" required>
-  
-  <!-- Acknowledgment -->
-  <label for="ackStatement">Acknowledgment Statement*</label>
-  <input type="text" id="ackStatement" name="ackStatement" value="I agree..." required>
+        <label for="nickname">Nickname/Preferred Name</label>
+        <input type="text" id="nickname" name="nickname" value="Nick" placeholder="Enter nickname">
 
-  <label for="ackDate">Acknowledgment Date*</label>
-  <input type="date" id="ackDate" name="ackDate" value="2025-01-01" required>
+        <label for="lastName">Last Name*</label>
+        <input type="text" id="lastName" name="lastName" value="YourLastName" placeholder="Enter last name" required>
 
-  <!-- Mascot & Divider -->
-  <label for="mascotAdj">Mascot Adjective*</label>
-  <input type="text" id="mascotAdj" name="mascotAdj" value="Fierce" required>
+        <!-- Acknowledgment -->
+        <label for="ackStatement">Acknowledgment Statement*</label>
+        <input type="text" id="ackStatement" name="ackStatement" value="I agree..." required>
 
-  <label for="mascotAnimal">Mascot Animal*</label>
-  <input type="text" id="mascotAnimal" name="mascotAnimal" value="Tiger" required>
+        <label for="ackDate">Acknowledgment Date*</label>
+        <input type="text" id="ackDate" name="ackDate" value="2025-11-02" placeholder="YYYY-MM-DD" required pattern="\d{4}-\d{2}-\d{2}">
 
-  <label for="divider">Divider*</label>
-  <input type="text" id="divider" name="divider" value="~" required>
+        <!-- Mascot & Divider -->
+        <label for="mascotAdj">Mascot Adjective*</label>
+        <input type="text" id="mascotAdj" name="mascotAdj" value="Fierce" required>
 
-  <!-- Picture -->
-  <label for="picture">Picture*</label>
-  <input type="file" id="picture" name="picture">
-  <label for="picCaption">Picture Caption*</label>
-  <input type="text" id="picCaption" name="picCaption" value="This is me!" required>
+        <label for="mascotAnimal">Mascot Animal*</label>
+        <input type="text" id="mascotAnimal" name="mascotAnimal" value="Tiger" required>
 
-  <!-- Personal Statement -->
-  <label for="personalStatement">Personal Statement*</label>
-  <textarea id="personalStatement" name="personalStatement" required>Your statement here...</textarea>
+        <label for="divider">Divider*</label>
+        <input type="text" id="divider" name="divider" value="~" required>
 
-  <!-- Main Bullets -->
-  <label>Main Bullets*</label>
-  <input type="text" name="bullet1" value="Background info" required>
-  <input type="text" name="bullet2" value="Hobbies" required>
-  <input type="text" name="bullet3" value="Skills" required>
-  <input type="text" name="bullet4" value="Goals" required>
-  <input type="text" name="bullet5" value="Favorite subjects" required>
-  <input type="text" name="bullet6" value="Experience" required>
-  <input type="text" name="bullet7" value="Fun fact" required>
+        <!-- Picture -->
+        <label for="picture">Picture*</label>
+        <input type="file" id="picture" name="picture" accept="image/*" required>
 
-  <!-- Courses -->
-  <div id="courses">
-    <div class="course">
-      <input type="text" name="dept" placeholder="Department" required>
-      <input type="text" name="courseNum" placeholder="Number" required>
-      <input type="text" name="courseName" placeholder="Name" required>
-      <input type="text" name="reason" placeholder="Reason" required>
-      <button type="button" class="deleteCourse">Delete</button>
-    </div>
-  </div>
-  <button type="button" id="addCourse">Add Course</button>
+        <label for="picCaption">Picture Caption*</label>
+        <input type="text" id="picCaption" name="picCaption" value="This is me!" required>
 
-  <!-- Quote -->
-  <label for="quote">Quote*</label>
-  <input type="text" id="quote" name="quote" value="Life is good" required>
-  <label for="quoteAuthor">Quote Author*</label>
-  <input type="text" id="quoteAuthor" name="quoteAuthor" value="Author Name" required>
+        <!-- Personal Statement -->
+        <label for="personalStatement">Personal Statement*</label>
+        <textarea id="personalStatement" name="personalStatement" required>Your statement here...</textarea>
 
-  <!-- Optional Fields -->
-  <label for="funny">Funny Thing</label>
-  <input type="text" id="funny" name="funny">
-  
-  <label for="share">Something I would like to share</label>
-  <input type="text" id="share" name="share">
+        <!-- Main Bullets -->
+        <label>Main Bullets*</label>
+        <input type="text" name="bullet1" value="Background info" required>
+        <input type="text" name="bullet2" value="Hobbies" required>
+        <input type="text" name="bullet3" value="Skills" required>
+        <input type="text" name="bullet4" value="Goals" required>
+        <input type="text" name="bullet5" value="Favorite subjects" required>
+        <input type="text" name="bullet6" value="Experience" required>
+        <input type="text" name="bullet7" value="Fun fact" required>
 
-  <!-- Links -->
-  <label>Links</label>
-  <input type="url" name="link1" placeholder="LinkedIn">
-  <input type="url" name="link2" value="https://github.com" placeholder="GitHub">
-  <input type="url" name="link3" value="https://twitter.com" placeholder="Twitter">
-  <input type="url" name="link4" value="https://facebook.com" placeholder="Facebook">
-  <input type="url" name="link5" value="https://instagram.com" placeholder="Instagram">
+        <!-- Courses -->
+        <div id="courses">
+        <div class="course">
+            <input type="text" name="dept" placeholder="Department" required>
+            <input type="text" name="courseNum" placeholder="Number" required>
+            <input type="text" name="courseName" placeholder="Name" required>
+            <input type="text" name="reason" placeholder="Reason" required>
+            <button type="button" class="deleteCourse">Delete</button>
+        </div>
+        </div>
+        <button type="button" id="addCourse">Add Course</button>
 
+        <!-- Quote -->
+        <label for="quote">Quote*</label>
+        <input type="text" id="quote" name="quote" value="Life is good" required>
+        <label for="quoteAuthor">Quote Author*</label>
+        <input type="text" id="quoteAuthor" name="quoteAuthor" value="Author Name" required>
 
-  <!-- Buttons -->
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-  <button type="button" id="clear">Clear</button>
-</form>
+        <!-- Optional Fields -->
+        <label for="funny">Funny Thing</label>
+        <input type="text" id="funny" name="funny">
+        
+        <label for="share">Something I would like to share</label>
+        <input type="text" id="share" name="share">
+
+        <!-- Links -->
+        <label>Links</label>
+        <input type="url" name="link1" placeholder="LinkedIn">
+        <input type="url" name="link2" value="https://github.com" placeholder="GitHub">
+        <input type="url" name="link3" value="https://twitter.com" placeholder="Twitter">
+        <input type="url" name="link4" value="https://facebook.com" placeholder="Facebook">
+        <input type="url" name="link5" value="https://instagram.com" placeholder="Instagram">
+
+        <!-- Acknowledgment -->
+        <label for="ackAgreement">
+        <input type="checkbox" id="ackAgreement" name="ackAgreement" required>
+        I agree to the following statement:
+        </label>
+        <p id="ackText">I acknowledge that the information provided is accurate and complete.</p>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clear">Clear</button>
+    </form>
     </main>
     <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <div data-include="components/footer.html"></div>
     </footer>
-
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="scripts/Introduction.js"></script>
 </body>
 </html>
