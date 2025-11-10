@@ -50,6 +50,13 @@ footer p a {
     text-decoration: none;
 }
 
+.home-image {
+  width: 500px;   /* or any size you prefer */
+  height: auto;   /* keeps aspect ratio */
+  display: block; 
+  margin: 0 auto; 
+}
+
 /* === DOM Tutorials Page Styling === */
 .tutorials-intro {
   text-align: center;
