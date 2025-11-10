@@ -45,6 +45,11 @@ footer {
   width: 100%;
 }
 
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
 /* === DOM Tutorials Page Styling === */
 .tutorials-intro {
   text-align: center;
