@@ -78,3 +78,76 @@ footer {
 .tutorial-card h3 a:hover {
   text-decoration: underline;
 }
+
+/* === Login Page Styling === */
+.login-section {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.login-section h2 {
+  text-align: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#loginForm input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#loginForm button {
+  margin-top: 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#loginForm button:hover {
+  background: #34495e;
+}
+
+#toggleText {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#toggleText a {
+  color: #2c3e50;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#loginResponse {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.nav-links a[href="login.html"] {
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a[href="login.html"]:hover {
+  background: #2980b9;
+}
