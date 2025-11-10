@@ -29,35 +29,73 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("submitBtn");
   let isSignup = false;
 
-  // Handle form submission
+  // Load any saved accounts from localStorage
+  const loadAccounts = () => JSON.parse(localStorage.getItem("accounts")) || [];
+
+  // Save accounts back to localStorage
+  const saveAccounts = (accounts) =>
+    localStorage.setItem("accounts", JSON.stringify(accounts));
+
+  // Form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const emailValue = email.value.trim();
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
+    const emailVal = email.value.trim();
+    const userVal = username.value.trim();
+    const passVal = password.value.trim();
+    const accounts = loadAccounts();
 
-    if (!emailValue.includes("@")) {
+    if (!emailVal.includes("@")) {
       response.textContent = "Please enter a valid email address.";
       response.style.color = "red";
       return;
     }
 
-    if (passwordValue.length < 4) {
-      response.textContent = "Password must be at least 4 characters long.";
+    if (passVal.length < 4) {
+      response.textContent = "Password must be at least 4 characters.";
       response.style.color = "red";
       return;
     }
 
     if (isSignup) {
-      response.textContent = `Account created successfully for ${usernameValue}!`;
-      response.style.color = "green";
-    } else {
-      response.textContent = `Welcome back, ${usernameValue}! You are logged in.`;
-      response.style.color = "green";
-    }
+      // --- CREATE NEW ACCOUNT ---
+      const existing = accounts.find(
+        (acc) => acc.email === emailVal || acc.username === userVal
+      );
 
-    form.reset();
+      if (existing) {
+        response.textContent = "Account already exists with that email or username.";
+        response.style.color = "red";
+        return;
+      }
+
+      accounts.push({ username: userVal, email: emailVal, password: passVal });
+      saveAccounts(accounts);
+      response.textContent = "✅ Account created successfully! You can now log in.";
+      response.style.color = "green";
+
+      // Switch back to login mode automatically
+      isSignup = false;
+      formTitle.textContent = "Login";
+      submitBtn.textContent = "Login";
+      toggleLink.textContent = "Create New Account";
+      form.reset();
+    } else {
+      // --- LOGIN EXISTING ACCOUNT ---
+      const user = accounts.find(
+        (acc) =>
+          (acc.username === userVal || acc.email === emailVal) &&
+          acc.password === passVal
+      );
+
+      if (user) {
+        response.textContent = `🎉 Welcome back, ${user.username}! You are logged in.`;
+        response.style.color = "green";
+      } else {
+        response.textContent = "Invalid credentials. Please try again or sign up.";
+        response.style.color = "red";
+      }
+    }
   });
 
   // Toggle between Login and Sign Up
@@ -66,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isSignup = !isSignup;
 
     if (isSignup) {
-      formTitle.textContent = "Sign Up";
+      formTitle.textContent = "Create New Account";
       submitBtn.textContent = "Sign Up";
       toggleLink.textContent = "Back to Login";
     } else {
@@ -76,5 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     response.textContent = "";
+    form.reset();
   });
 });
