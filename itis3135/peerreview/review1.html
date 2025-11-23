@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer Review 1</title>
+   <!--https://coolors.co/023c40-220c10-a1a6b4-d7263d-b4654a-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #023c40;
+            color: #a1a6b4
+        }
+        header {
+            background-color: #220c10;
+            color: #a1a6b4;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav a {
+            color: #d7263d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        main {
+            margin: 0 auto;
+            max-width: 1200px;
+            width: 90%;
+        }
+        img {
+            vertical-align: middle; 
+            width: 500px; 
+            height: auto;
+        }
+        footer {
+            background-color: #b4654a;
+            color: #220c10;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .review-spacer {
+            text-align: center;
+        }
+        .sc1 {
+            display: block;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            display: inline-block;
+            text-align: left;
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+        ul li {
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        a {
+            color: #d7263d;
+        }
+
+        /* Mobile devices (up to 600px) */
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Tablets (601px to 992px) */
+        @media (min-width: 601px) and (max-width: 992px) {
+            main {
+                width: 92%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktops (993px and above) */
+        @media (min-width: 993px) {
+            main {
+                width: 90%;
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="../components/header.html"></div>
+    </header>
+    <main>
+        <h2>Gleason, Tanner</h2>
+        <figure class="sc1">
+            <img src="PRimages/gleasonSC.png" alt="Gleason, Tanner Site Screenshot">
+            <figcaption><a href="https://webpages.charlotte.edu/tgleaso3/itis3135/client/index.html">https://webpages.charlotte.edu/tgleaso3/itis3135/client/index.html</a></figcaption>
+        </figure>
+        <div class="review-spacer">
+            <section id="review">
+                <h3>Independence Lodge Website</h3>
+                <ul>
+                    <li>Repository Names: Everything named appropriately.</li>
+                    <li>CSS File: Looks good, everything in one css file.</li>
+                    <li>Contrast: Colors contrast well. Everything looks fine to me.</li>
+                    <li>Repetition: Each page follows a logical structured format.</li>
+                    <li>Alignment: All text and elements are aligned properly.</li>
+                    <li>Proximity: Spacing is efficient.</li>
+                    <li>Structure: Header, Main, Footer are present.</li>
+                    <li>Header: The header has the company branding and a nav bar.</li>
+                    <li>Main: Structured properly.</li>
+                    <li>Slogan: Site has slogan and branding across pages.</li>
+                    <li>Footer: Structured properly. Does not include the design firm name.</li>
+                    <li>
+                        Project Requirements: The repository names are all clear and appropriately labeled, 
+                        and the CSS is well-organized with everything consolidated into a single file. The 
+                        site’s color contrast is strong and visually accessible, and each page maintains a 
+                        consistent layout that reinforces repetition and structure. Alignment appears clean 
+                        throughout, with text and elements positioned properly, and spacing is used efficiently 
+                        to support good proximity. The overall structure is solid, with a clear header, main section, 
+                        and footer. The header effectively showcases the company branding along with a navigation bar, 
+                        while the main content areas are neatly organized. The slogan and branding are carried consistently 
+                        across pages, and the footer is properly structured, though it does not include the design firm name.
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <br>
+        <br>
+    </main>
+    <footer>
+        <div data-include="../components/footer.html"></div>
+    </footer>
+    <script src="../scripts/HTMLInclude.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        if (typeof setHeaderLinks === "function") {
+          setHeaderLinks();
+        }
+      }, 50);
+    });
+  </script>
+
+</body>
+</html>
