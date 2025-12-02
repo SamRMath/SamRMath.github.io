@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.querySelectorAll('.tutorial-card').forEach(card => {
+  document.querySelectorAll('.tutorial-card').forEach((card) => {
     const body = card.querySelector('.card-body') || card.querySelector('p');
     if (body) {
       card.classList.remove('open');
