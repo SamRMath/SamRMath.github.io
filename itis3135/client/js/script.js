@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (email.includes("@")) {
         response.textContent = "Thank you! Your email has been received.";
         response.style.color = "green";
+        document.getElementById("email").value = ""; // Clear email field
+        document.getElementById("emailBody").value = ""; // Clear message field
       } else {
         response.textContent = "Please enter a valid email address.";
         response.style.color = "red";
@@ -16,6 +18,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // container where cards live
+  const list = document.querySelector('.tutorial-list');
+  if (!list) return;
+
+  // Event delegation: handle clicks on any card or its children
+  list.addEventListener('click', (e) => {
+    // If user clicked a link (or inside a link), do nothing - allow navigation
+    const link = e.target.closest('a');
+    if (link) {
+      // if you want to PREVENT navigation and toggle instead, uncomment:
+      // e.preventDefault();
+      return;
+    }
+
+    // Find the closest card (works even if user clicks an inner element)
+    const card = e.target.closest('.tutorial-card');
+    if (!card) return;
+
+    // Toggle open class
+    card.classList.toggle('open');
+
+    // Accessibility: update aria-expanded on the title
+    const title = card.querySelector('h3');
+    if (title) {
+      const expanded = card.classList.contains('open');
+      title.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    }
+  });
+
+  // Optional: hide all card bodies on load (works even if HTML wasn't modified)
+  document.querySelectorAll('.tutorial-card').forEach(card => {
+    const body = card.querySelector('.card-body') || card.querySelector('p');
+    if (body) {
+      // ensure hidden class behavior matches CSS
+      card.classList.remove('open');
+      // no inline style changes so CSS handles it
+    }
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("loginForm");

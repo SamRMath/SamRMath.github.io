@@ -163,3 +163,56 @@ footer p a {
 .nav-links a[href="login.html"]:hover {
   background: #2980b9;
 }
+
+email, textarea {
+  width: 50%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+
+.tutorial-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* hide description by default */
+.tutorial-card .card-body {
+  display: none;
+  margin-top: 8px;
+  transition: max-height 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+}
+
+/* when open show it */
+.tutorial-card.open .card-body {
+  display: block;
+  opacity: 1;
+}
+
+/* make link inside title look normal */
+.tutorial-card h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.tutorial-image1 {
+  width: 50%;
+  height: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.tutorial-image2, .tutorial-image3 {
+  width: 75%;
+  height: auto;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
